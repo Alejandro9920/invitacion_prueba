@@ -1,0 +1,320 @@
+:root{
+  --primary: #9fcecf;
+  --bg-color: #fff;
+  --bg-envelope-color: #88b2b5;
+  --envelope-tab: #65979c;
+  --envelope-cover: #456c73;
+  --shadow-color: rgba(0, 0, 0, 0.2);
+  --txt-color: #444;
+  --heart-color: rgb(0, 0, 0);
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: var(--bg-color);
+  display: flex;\
+  align-items: center;
+  justify-content: center;
+}
+.container {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+}
+.container > .envelope-wrapper {
+  background: var(--bg-envelope-color);
+  box-shadow: 0 0 40px var(--shadow-color);
+  position: absolute;
+}
+.envelope-wrapper > .envelope {
+  position: relative;
+  width: 300px;
+  height: 230px;
+}
+.envelope-wrapper > .envelope::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  border-top: 130px solid var(--envelope-tab);
+  border-right: 150px solid transparent;
+  border-left: 150px solid transparent;
+  transform-origin: top;
+  transition: all 0.5s ease-in-out 0.7s;
+}
+.envelope-wrapper > .envelope::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  width: 0px;
+  height: 0px;
+  border-top: 130px solid transparent;
+  border-right: 150px solid var(--envelope-cover);
+  border-bottom: 100px solid var(--envelope-cover);
+  border-left: 150px solid var(--envelope-cover);
+}
+.envelope > .letter {
+  position: absolute;
+  right: 20%;
+  bottom: 0;
+  width: 54%;
+  height: 90%;
+  background: var(--primary);
+  text-align: center;
+  transition: all 1s ease-in-out;
+  box-shadow: 0 0 5px var(--shadow-color);
+  padding: 10px 10px 10px 10px;
+}
+
+.envelope > .letter > .text {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: var(--txt-color);
+  font-size: 10px;
+  text-align: center;
+}
+.heart {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 15px;
+  height: 15px;
+  background: var(--heart-color);
+  z-index: 4;
+  transform: translate(-50%, -20%) rotate(45deg);
+  transition: transform 0.5s ease-in-out 1s;
+  box-shadow: 0 1px 6px var(--shadow-color);
+  cursor: pointer;
+}
+.heart:before, 
+.heart:after {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background-color: var(--heart-color);
+  border-radius: 50%;
+}
+.heart:before {
+  top: -7.5px;
+}
+.heart:after {
+  right: 7.5px;
+}
+.flap > .envelope:before {
+  transform: rotateX(180deg);
+  z-index: 0;
+}
+.flap > .envelope > .letter {
+
+}
+/*transform: translateY(-145%);
+  transition-delay: 1s;*/
+/*bottom: 100px;*/
+/*transform: scale(1.5);*/
+.flap > .heart {
+  transform: rotate(90deg);
+  transition-delay: 0.4s;
+}
+
+/*margin-top: 70vh;*/
+
+.desplazo{
+  animation: fly-ball 4s forwards
+}
+
+@keyframes fly-ball {
+100% {
+  transform: translateY(135%);
+  }
+}
+
+.subo {
+  animation: subo_arriba 1s forwards
+}
+
+@keyframes subo_arriba {
+100% {
+  bottom: 435px;
+  }
+}
+
+.agrando {
+  
+  transform: scale(2,2.7); 
+}
+
+.zoom {
+  transform: scale(1.3);
+}
+
+.envelope {
+  transition: transform 1.5s
+}
+
+.carta_zoom{  
+  transform: scale(2,2.5);
+}
+
+.invitado{
+    position: absolute;
+    top: 75%;
+    left: 25%;
+    z-index: 4;
+    font-size: 20px;
+}
+
+.box_img{
+  text-align: center;
+}
+
+.img{
+  width: 100px;
+  border-radius: 50%;
+}
+
+
+/* CUENTA REGRESIVA */
+
+#countdown .countdown-box {
+    color: #fff;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    text-align: center
+}
+
+#countdown.v2 .subtitle {
+    color: #fff
+}
+
+#countdown .countdown-box .headline {
+    color: #fff
+}
+
+#countdown.v2 .countdown-box .headline {
+    margin-bottom: 20px
+}
+
+#countdown .countdown-box .strike>span:before,#countdown .countdown-box .strike>span:after {
+    background: #fff
+}
+
+#countdown .wraper-clock {
+    display: inline-block;
+    vertical-align: bottom;
+    padding: 20px 25px;
+}
+
+#countdown .wraper-clock .value {
+    font: normal 80px/40px "Great Vibes";
+    color: #fff;
+    padding-bottom: 18px;
+    min-width: 115px
+}
+
+#countdown .wraper-clock .value-label {
+    font: normal 28px/28px "Great Vibes"
+}
+
+#countdown .sep {
+    display: none
+}
+
+#countdown #clock {
+    padding: 10px 0
+}
+
+#countdown #clock span {
+    font-size: 16px
+}
+
+#countdown .controls {
+    font-family: Montserrat;
+    letter-spacing: 2px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 14px
+}
+
+#countdown .controls label {
+    font-weight: 400;
+    font-size: 14px
+}
+
+#countdown .headline {
+    font-family: Great Vibes;
+    font-size: 45px;
+    font-weight: 700;
+    text-align: center
+}
+
+#countdown .subtitle {
+    font-size: 18px;
+    color: #fff
+}
+
+@media(min-width: 767px) {
+    #countdown .sep {
+        display:inline-block;
+        height: 90px;
+        line-height: 0
+    }
+}
+
+@media(min-width: 769px) {
+    #countdown #clock span {
+        font-size:25px
+    }
+}
+
+@media(max-width: 768px) {
+    #countdown .headline {
+        font-size:15px
+    }
+
+    #countdown .wraper-clock .value {
+        font: normal 15px/2px "Great Vibes";
+        min-width: 30px
+    }
+
+    #countdown .wraper-clock .value-label {
+        font: normal 10px/2px "Great Vibes"
+    }
+
+    #countdown .countdown-box .strike>span:before,#countdown .countdown-box .strike>span:after {
+        background: 0 0
+    }
+
+    #countdown .wraper-clock {
+        display: inline-block;
+        vertical-align: bottom;
+        padding: 0px 3px
+    }
+}
+
+@media(max-width: 400px) {
+    #countdown .wraper-clock .value {
+        font:normal 29px/29px "Great Vibes";
+        min-width: 60px
+    }
+
+    #countdown .wraper-clock .value-label {
+        font: normal 17px/28px "Great Vibes"
+    }
+}
+
+/* TITULOS */
+
+@media(max-width: 768px) {
+    .titulo{
+      margin-top: 5px;
+    }
+
+    .subtitulo{
+      font-size: 10px;
+    }
+
+    .text{
+      margin-top: -7px;
+    }
+}
