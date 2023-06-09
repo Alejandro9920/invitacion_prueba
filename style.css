@@ -38,7 +38,7 @@ body{
   position: absolute;
   top: 0;
   z-index: 2;
-  border-top: 130px solid var(--envelope-tab);
+  border-top: 120px solid var(--envelope-tab);
   border-right: 140px solid transparent;
   border-left: 140px solid transparent;
   transform-origin: top;
@@ -50,9 +50,9 @@ body{
   z-index: 2;
   width: 0px;
   height: 0px;
-  border-top: 130px solid transparent;
+  border-top: 120px solid transparent;
   border-right: 140px solid var(--envelope-cover);
-  border-bottom: 100px solid var(--envelope-cover);
+  border-bottom: 90px solid var(--envelope-cover);
   border-left: 140px solid var(--envelope-cover);
 }
 .envelope > .letter {
@@ -126,7 +126,7 @@ body{
 
 @keyframes fly-ball {
 100% {
-  transform: translateY(80%);
+  transform: translateY(90%);
   }
 }
 
@@ -136,7 +136,7 @@ body{
 
 @keyframes subo_arriba {
 100% {
-  bottom: 340px;
+  bottom: 325px;
   }
 }
 
