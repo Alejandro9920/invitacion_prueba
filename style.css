@@ -125,7 +125,7 @@ body{
 
 @keyframes fly-ball {
 100% {
-  transform: translateY(95%);
+  transform: translateY(90%);
   }
 }
 
@@ -141,7 +141,7 @@ body{
 
 .agrando {
   
-  transform: scale(1.8,1.9); 
+  transform: scale(1.7,1.9); 
 }
 
 .zoom {
