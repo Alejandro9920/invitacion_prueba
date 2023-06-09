@@ -202,7 +202,7 @@ body{
 #countdown .wraper-clock {
     display: inline-block;
     vertical-align: bottom;
-    padding: 5px 5px;
+    padding: 5px 4px;
 }
 
 #countdown .wraper-clock .value {
