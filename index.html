@@ -7,7 +7,7 @@
     <title>PAULA & BLAS</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Slab&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -19,16 +19,31 @@
                         <h1 class="subtitulo">PAULA & BLAS</h1>
                         <div class="box_img"><img src="img.jpg" class="img"></div>
                         <h2 class="titulo">
-                            Nuestra boda 
+                            Nuestra Boda 
                         </h2>
                         <div id="countdown">
                         	<div id="clock" class="personalColorTitutlo"></div>
                     	</div>
+                    	<div id="oculto" class="oculto_class">
+                    		<div class="lugar">
+	                    		<h1 class="subtitulo">¿Dónde y Cuándo?</h1>
+	                    		<div class="detalle">
+	                    			<div class="nombre">
+										<b>Dirección:</b><div clas="letras">Paraguay 3901, C1425 CABA</div>
+	                    				<br>
+	                    				<b>Cuándo:</b><div class="letras">30 de diciembre de 2023 20:00 hrs.</div>
+	                    			</div>
+	                    			<div class="box_img_donde">
+	                    				<img src="3abejas.jpg" class="img_donde">
+	                    			</div>
+	                    		</div>
+	                    	</div>
+	                    </div>
                     </div>
                 </div>
             </div>
             <div class="heart" id="cora"></div>
-            <div class="invitado">VARGAS</div>
+            <div class="invitado">Vargas</div>
         </div>
     </div>
     <script src="js_native.js"></script>
@@ -38,6 +53,7 @@
     	const envelope = document.getElementById("carta");
     	const buzon = document.getElementById("buzon");
     	const invitate = document.getElementById("invitate");
+    	const oculto = document.getElementById("oculto");
     	setTimeout(() => {
     		envelope.classList.toggle('flap');
     	}, 1500);
@@ -52,7 +68,9 @@
 
     	setTimeout(() => {
     		invitate.classList.toggle('agrando');
+    		oculto.classList.remove("oculto_class");
     	}, 3500);
+    	
 
     	/*setTimeout(() => {
     		envelope.classList.toggle('desplazo');
@@ -63,7 +81,7 @@
 
         $(document).ready(function() { 
 	        $('#clock').countdown('2024/03/16').on('update.countdown', function(event) {
-			    var $this = $(this).html(event.strftime('' + '<span class="wraper-clock"><div class="value">%D</div><div class="value-label">Days</div></span><span class="sep">:</span>' + '<span class="wraper-clock"><div class="value">%H</div><div class="value-label">Hours</div></span><span class="sep">:</span>' + '<span class="wraper-clock"><div class="value">%M</div><div class="value-label">Minutes</div></span><span class="sep">:</span>' + '<span class="wraper-clock"><div class="value">%S</div><div class="value-label">Seconds</div></span>'));
+			    var $this = $(this).html(event.strftime('' + '<span class="wraper-clock"><div class="value">%D</div><div class="value-label">Días</div></span><span class="sep">:</span>' + '<span class="wraper-clock"><div class="value">%H</div><div class="value-label">Horas</div></span><span class="sep">:</span>' + '<span class="wraper-clock"><div class="value">%M</div><div class="value-label">Minutos</div></span><span class="sep">:</span>' + '<span class="wraper-clock"><div class="value">%S</div><div class="value-label">Segundos</div></span>'));
 			});
 		});
     </script>

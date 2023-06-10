@@ -106,7 +106,7 @@ body{
   z-index: 0;
 }
 .flap > .envelope > .letter {
-
+  overflow: auto;
 }
 /*transform: translateY(-145%);
   transition-delay: 1s;*/
@@ -158,10 +158,11 @@ body{
 
 .invitado{
     position: absolute;
-    top: 75%;
-    left: 25%;
+    top: 65%;
+    left: 30%;
     z-index: 4;
-    font-size: 20px;
+    font-size: 40px;
+    font-family: 'Great Vibes', cursive;
 }
 
 .box_img{
@@ -262,12 +263,46 @@ body{
 
 .subtitulo{
   font-size: 10px;
+  font-family: 'Josefin Slab', serif;
 }
 
 .text{
   margin-top: -7px;
 }
 
+.oculto_class{
+  visibility: hidden;
+}
+
+.lugar{
+  padding: 1px;
+  background: white;
+  border-radius: 5px;
+}
+
+.negrita{
+  font-weight: bold;
+}
+
+.detalle{
+  display: flex;
+  flex-direction: row;
+}
+
+.img_donde{
+  width: 65px;
+  height: 80px;
+}
+
+.nombre{
+  text-align: center;
+  font-size: 9px;
+}
+
+.box_img_donde{
+  padding-left: 2px;
+  padding-right: 2px;
+}
 
 /*
 @media(min-width: 767px) {
