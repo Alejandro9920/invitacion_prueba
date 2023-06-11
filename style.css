@@ -166,12 +166,14 @@ body{
 }
 
 .box_img{
+  position: relative;
   text-align: center;
 }
 
 .img{
   width: 100px;
   border-radius: 50%;
+  padding-top: 3px;
 }
 
 
@@ -221,7 +223,7 @@ body{
 }
 
 #countdown #clock {
-    padding: 10px 0
+    padding: 0px 0
 }
 
 #countdown #clock span {
@@ -257,8 +259,9 @@ body{
 
 
 .titulo{
-  margin-top: 5px;
+  margin-top: 30px;
   font-family: 'Great Vibes', cursive;
+  margin-bottom: 5px;
 }
 
 .subtitulo{
@@ -297,11 +300,19 @@ body{
 .nombre{
   text-align: center;
   font-size: 9px;
+  padding-top: 5px;
 }
 
 .box_img_donde{
   padding-left: 2px;
   padding-right: 2px;
+}
+
+.marco{
+  position: absolute;
+  width: 150px;
+  left: -3px;
+  top: -11px;
 }
 
 /*
