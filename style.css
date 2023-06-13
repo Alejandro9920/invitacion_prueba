@@ -1,9 +1,9 @@
 :root{
-  --primary: #9fcecf;
+  --primary: #ffffff;
   --bg-color: #fff;
-  --bg-envelope-color: #88b2b5;
-  --envelope-tab: #65979c;
-  --envelope-cover: #456c73;
+  --bg-envelope-color: #f3e2ca;
+  --envelope-tab: #eacea3;
+  --envelope-cover: #e2ba7c;
   --shadow-color: rgba(0, 0, 0, 0.2);
   --txt-color: #444;
   --heart-color: rgb(0, 0, 0);
@@ -58,13 +58,13 @@ body{
   position: absolute;
   right: 20%;
   bottom: 0;
-  width: 54%;
+  width: 60.6%;
   height: 90%;
   background: var(--primary);
   text-align: center;
   transition: all 1s ease-in-out;
   box-shadow: 0 0 5px var(--shadow-color);
-  padding: 10px 10px 10px 10px;
+  padding: 10px 0px 10px 0px;
 }
 
 .envelope > .letter > .text {
@@ -210,7 +210,7 @@ body{
 
 #countdown .wraper-clock .value {
     font: normal 15px/0px "Great Vibes";
-    color: #fff;
+    color: #000;
     min-width: 15px;
 }
 
@@ -259,14 +259,29 @@ body{
 
 
 .titulo{
-  margin-top: 30px;
-  font-family: 'Great Vibes', cursive;
+  background-color: #f3e2ca;
+  margin-top: 98px;
+  font-family: 'Josefin Slab', serif;
   margin-bottom: 5px;
 }
 
 .subtitulo{
   font-size: 10px;
+  font-family: 'Great Vibes', cursive;
+}
+
+.donde {
+  font-size: 10px;
   font-family: 'Josefin Slab', serif;
+}
+
+.alianzas{
+  margin-top: -10px;
+  margin-bottom: 7px;
+}
+
+.anillos{
+  width: 35px;
 }
 
 .text{
@@ -277,10 +292,11 @@ body{
   visibility: hidden;
 }
 
+.marco_oculto{
+  padding-top: 14px;
+}
+
 .lugar{
-  padding: 1px;
-  background: white;
-  border-radius: 5px;
 }
 
 .negrita{
@@ -290,6 +306,10 @@ body{
 .detalle{
   display: flex;
   flex-direction: row;
+  padding: 5px;
+  margin: 5px;
+  background-color: var(--bg-envelope-color);
+  border-radius: 5px;
 }
 
 .img_donde{
@@ -300,7 +320,6 @@ body{
 .nombre{
   text-align: center;
   font-size: 9px;
-  padding-top: 5px;
 }
 
 .box_img_donde{
@@ -310,10 +329,141 @@ body{
 
 .marco{
   position: absolute;
-  width: 150px;
-  left: -3px;
-  top: -11px;
+  width: 182px;
+  left: 0px;
+  top: -101px;
 }
+
+.flecha {
+  animation: arrow 1s ease-in-out infinite;
+  font-size: 15px;
+}
+
+.elemento{
+  margin-top: -22px;
+}
+
+@keyframes arrow {
+  0% {
+  transform: translate(0px, 7px);
+  }
+  50% {
+  transform: translate(0px, 14px);
+  }
+  100% {
+  transform: translate(0px, 7px);
+  }
+}
+
+*, ::after, ::before {
+  box-sizing: unset !important;
+}
+
+h2 {
+  font-size: 1em !important;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  line-height: 1.5;
+  color: inherit;
+}
+
+/*MUSICA*/
+
+#musica {
+  float: left;
+  right: 0;
+  top: 45%;
+  position: fixed;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background-color: var(--envelope-cover);
+  letter-spacing: 3px;
+  font-family: montserrat;
+  color: #fff;
+  border-radius: 3px 0 0 3px;
+  font-weight: 100;
+  font-size: 22px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
+}
+
+.musicaOn {
+  float: left;
+  right: 0;
+
+  position: fixed;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background-color: var(--envelope-cover);
+  letter-spacing: 3px;
+  font-family: montserrat;
+  color: #fff;
+  border-radius: 3px 0 0 3px;
+  font-weight: 100;
+  font-size: 22px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
+}
+
+.musicaOff {
+  float: left;
+  right: 0;
+  
+  position: fixed;
+  -webkit-transform-origin: 0 0;
+  -moz-transform-origin: 0 0;
+  -ms-transform-origin: 0 0;
+  -o-transform-origin: 0 0;
+  transform-origin: 0 0;
+  background-color: var(--envelope-cover);
+  letter-spacing: 3px;
+  font-family: montserrat;
+  color: #fff;
+  border-radius: 3px 0 0 3px;
+
+  font-weight: 100;
+  font-size: 22px;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  z-index: 1000;
+  text-align: center;
+}
+
+.musicaOn img {
+  width: 50px;
+  height: 50px;
+}
+
+.musicaOff .flotante {
+  margin-top: 13px !important; 
+}
+
+.hidden {
+  display: none!important;
+  visibility: hidden!important;
+}
+
+@media (max-width: 768px){
+  .musicaOn, .musicaOff {
+    top: 30%;
+  }
+}
+
+/*CIERRO MUSICA */
+
 
 /*
 @media(min-width: 767px) {

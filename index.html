@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Josefin+Slab&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
@@ -16,23 +18,34 @@
             <div class="envelope" id="buzon">
                 <div class="letter" id="invitate">
                     <div class="text">
-                        <h1 class="subtitulo">PAULA & BLAS</h1>
                         <div class="box_img">
-                        	<img src="img.jpg" class="img">
-                        	<img src="marco.png" class="marco"></div>
-                        <h2 class="titulo">
-                            Nuestra Boda 
-                        </h2>
+                        	<img src="img_final.png" class="marco">
+                        </div>
+                        <div class="titulo">
+	                        <h2>
+	                            Paula & Blas 
+	                        </h2>
+	                    </div>
+	                    <div class="subtitulo">
+	                        <h5>
+	                            Nuestra Boda 
+	                        </h5>
+	                    </div>
+	                    <div class="alianzas">
+                        	<img src="alianzas.png" class="anillos">
+                        </div>
                         <div id="countdown">
                         	<div id="clock" class="personalColorTitutlo"></div>
                     	</div>
-                    	<div id="oculto" class="oculto_class">
+                    	<div class="elemento">
+							<a class="" href=""><i class="fa fa-angle-down fa-2x flecha" aria-hidden="true"></i> </a>
+						</div>
+                    	<div id="oculto" class="oculto_class marco_oculto">
                     		<div class="lugar">
-	                    		<h1 class="subtitulo">¿Dónde y Cuándo?</h1>
+	                    		<h3 class="donde">¿Dónde y Cuándo?</h3>
 	                    		<div class="detalle">
 	                    			<div class="nombre">
 										<b>Dirección:</b><div clas="letras">Paraguay 3901, C1425 CABA</div>
-	                    				<br>
 	                    				<b>Cuándo:</b><div class="letras">30 de diciembre de 2023 20:00 hrs.</div>
 	                    			</div>
 	                    			<div class="box_img_donde">
@@ -48,30 +61,60 @@
             <div class="invitado">Vargas</div>
         </div>
     </div>
+    <div class="musicaOff" target="_blank" id="sonidoMusicaOff" style="cursor: pointer;">
+		<i class="fa fa-volume-up flotante" id="iconoMusica"></i>
+	</div>
+    <div class="musicaOn" target="_blank" id="sonidoMusicaOn" style="cursor: pointer;">
+		<img data-cfsrc="musica-on-4.gif" src="musica-on-4.gif">
+	</div>
+    <audio id="musica" loop="">
+		<source src="Falling-In-Love-With-You-Can-t-Help-Falling-In-Love.mp3" type="audio/mp3">
+	</audio>
+    <button type="button" class="btn btn-danger hidden" data-toggle="modal" data-target="#modalBienvenida"></button>
+    <div class="modal fade in" id="modalBienvenida" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="false">
+		<div class="modal-dialog modal-dialog-centered" role="document">
+			<div class="modal-content modal-audio">
+				<h3>Bienvenidos a la invitación de <br>Caro y Seba</h3>
+				<div class="text-center mb-3" id="boton-modal">
+					<button class="btn btn-primary w-50 rounded-pill b1 text-transform abrir_sobre">INGRESAR</button>
+				</div>
+			</div>
+		</div>
+	</div>
+    
     <script src="js_native.js"></script>
     <script src="jquery.countdown.js"></script>
     <script src="jquery.countdown.min.js"></script>
+    
+    
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
     <script type="text/javascript">
+    	const abrir = document.querySelector('.abrir_sobre');
     	const envelope = document.getElementById("carta");
     	const buzon = document.getElementById("buzon");
     	const invitate = document.getElementById("invitate");
     	const oculto = document.getElementById("oculto");
-    	setTimeout(() => {
-    		envelope.classList.toggle('flap');
-    	}, 1500);
+        abrir.addEventListener('click', () => {
+	        setTimeout(() => {
+	    		envelope.classList.toggle('flap');
+	    	}, 1500);
 
-    	setTimeout(() => {
-    		envelope.classList.toggle('desplazo');
-    	}, 1000);
+	    	setTimeout(() => {
+	    		envelope.classList.toggle('desplazo');
+	    	}, 1000);
 
-    	setTimeout(() => {
-    		invitate.classList.toggle('subo');
-    	}, 3000);
+	    	setTimeout(() => {
+	    		invitate.classList.toggle('subo');
+	    	}, 3000);
 
-    	setTimeout(() => {
-    		invitate.classList.toggle('agrando');
-    		oculto.classList.remove("oculto_class");
-    	}, 3500);
+	    	setTimeout(() => {
+	    		invitate.classList.toggle('agrando');
+	    		oculto.classList.remove("oculto_class");
+	    	}, 3500);
+        });
+
     	
 
     	/*setTimeout(() => {
@@ -87,5 +130,41 @@
 			});
 		});
     </script>
+    <script>
+		$(document).ready(function() {
+
+			$('#modalBienvenida').modal('toggle');
+            
+
+            $("#boton-modal").click(function() {
+                $('#modalBienvenida').modal('hide');
+                var audio = document.getElementById("musica");
+                audio.play();
+                audio.muted = false; // without this line it's not working although I have "muted" in HTML
+            });
+
+            $("#modalBienvenida").on("click",function() { 
+                var audio = document.getElementById("musica");
+                audio.play();
+                audio.muted = false;
+             });
+
+            $("#sonidoMusicaOff").click(function() {
+                var audio = document.getElementById("musica");
+                $("#sonidoMusicaOn").removeClass( "hidden" );
+                $("#sonidoMusicaOff").addClass( "hidden" );
+                audio.play(); // without this line it's not working although I have "muted" in HTML
+            });
+
+            $("#sonidoMusicaOn").click(function() {
+                var audio = document.getElementById("musica");
+                $("#sonidoMusicaOff").removeClass( "hidden" );
+                $("#sonidoMusicaOn").addClass( "hidden" );
+                audio.pause(); // without this line it's not working although I have "muted" in HTML
+            });
+
+		});
+
+		</script>
 </body>
 </html>
