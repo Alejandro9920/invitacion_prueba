@@ -59,12 +59,12 @@ body{
   right: 20%;
   bottom: 0;
   width: 60.6%;
-  height: 90%;
+  height: 95%;
   background: var(--primary);
   text-align: center;
   transition: all 1s ease-in-out;
   box-shadow: 0 0 5px var(--shadow-color);
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0px 0px 0px;
 }
 
 .envelope > .letter > .text {
@@ -176,6 +176,10 @@ body{
   padding-top: 3px;
 }
 
+.modal-audio {
+  padding: 4%;
+  text-align: center;
+}
 
 /* CUENTA REGRESIVA */
 
@@ -297,6 +301,7 @@ body{
 }
 
 .lugar{
+  padding: 4px;
 }
 
 .negrita{
@@ -304,17 +309,58 @@ body{
 }
 
 .detalle{
-  display: flex;
-  flex-direction: row;
   padding: 5px;
-  margin: 5px;
   background-color: var(--bg-envelope-color);
   border-radius: 5px;
 }
 
+.comollego{
+  font-size: 10px;
+  display: block;
+}
+
+.col_comollego{
+  margin: 4px;
+}
+
+.img_dress{
+  width: 50%;
+}
+
+.dress{
+  padding: 4px;
+}
+
+.frase{
+  text-shadow: 0 1px 2px rgba(0,0,0,0.6);
+  color: #ffffff !important;
+}
+
+.frase_personal{
+  background-color: #333;
+  background-image: url(frase_fondo.jpg);
+}
+
+.hash-box {
+  margin: 60px AUTO;
+  text-align: center;
+}
+
+.row{
+  margin-right: 0px !important;
+}
+
+.background-cover {
+  background-position: 50% 0;
+  background-size: cover;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+}
+
 .img_donde{
-  width: 65px;
-  height: 80px;
+  width: 75px;
+  height: 100px;
 }
 
 .nombre{
@@ -339,8 +385,29 @@ body{
   font-size: 15px;
 }
 
+.datos{
+  border: 1px solid rgba(0,0,0,.1);
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.titulo_modulos{
+  font-size: 14px;
+  font-family: 'Josefin Slab', serif;
+}
+
+.regalos{
+  padding: 4px;
+}
+
 .elemento{
   margin-top: -22px;
+}
+
+.envio{
+  font-size: 10px;
+  width: 80%;
+  margin: 4px;
 }
 
 @keyframes arrow {
@@ -452,8 +519,8 @@ h2 {
 }
 
 .hidden {
-  display: none!important;
-  visibility: hidden!important;
+  display: none !important;
+  visibility: hidden !important;
 }
 
 @media (max-width: 768px){
